@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { AboutComponent } from './components/about/about.component';
 import { AddlistComponent } from './components/addlist/addlist.component';
+import { ShowlistComponent } from './components/showlist/showlist.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AddlistComponent } from './components/addlist/addlist.component';
     NavbarComponent,
     TodoComponent,
     AboutComponent,
-    AddlistComponent
+    AddlistComponent,
+    ShowlistComponent
   ],
   imports: [
     BrowserModule,

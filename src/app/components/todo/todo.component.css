@@ -1,0 +1,19 @@
+.container {
+	display: flex;
+	margin: 25px;
+
+}
+
+.item-0 {
+	align-self: stretch;
+	width:30%;
+	height: 100%;
+}
+
+.item-1 {
+	flex-grow: 1;
+	align-self: stretch;
+}
+.center{
+	text-align: center;
+}
