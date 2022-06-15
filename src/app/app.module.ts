@@ -8,6 +8,7 @@ import { TodoComponent } from './components/todo/todo.component';
 import { AboutComponent } from './components/about/about.component';
 import { AddlistComponent } from './components/addlist/addlist.component';
 import { ShowlistComponent } from './components/showlist/showlist.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ShowlistComponent } from './components/showlist/showlist.component';
     TodoComponent,
     AboutComponent,
     AddlistComponent,
-    ShowlistComponent
+    ShowlistComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

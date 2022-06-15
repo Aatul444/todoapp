@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addlist.component.css']
 })
 export class AddlistComponent implements OnInit {
-
+title='addlist';
   constructor() { }
-
+  newworklist(){
+    alert('Thanks to add list'+ this.title + 'nana')
+  }
+  // messagefromA=this.newworklist;
   ngOnInit(): void {
   }
 
