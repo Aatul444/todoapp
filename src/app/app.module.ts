@@ -9,6 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 import { AddlistComponent } from './components/addlist/addlist.component';
 import { ShowlistComponent } from './components/showlist/showlist.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-   
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
