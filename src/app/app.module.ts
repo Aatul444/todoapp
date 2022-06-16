@@ -10,6 +10,7 @@ import { AddlistComponent } from './components/addlist/addlist.component';
 import { ShowlistComponent } from './components/showlist/showlist.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { CurrenttaskComponent } from './components/currenttask/currenttask.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     AddlistComponent,
     ShowlistComponent,
-    LoginComponent
+    LoginComponent,
+    CurrenttaskComponent
   ],
   imports: [
     BrowserModule,

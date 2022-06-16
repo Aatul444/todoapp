@@ -9,23 +9,22 @@ import { ListdataService } from "../../listdata.service"
 export class AddlistComponent implements OnInit {
 title = 'addlist';
 infoReceived1: string[] = [];
+name = '';
 
-// updateInfo(frm: any){
+updateInfo(frm:any){
 
-//   this.dservice.addInfo(frm.value.location)
+  this.dservice.addInfo(this.name)
 
-// }
+}
 
   getInfoFromService1(){
     
-    this.infoReceived1 = this.dservice.getInfo1()
+    this.infoReceived1 = this.dservice.addInfo(this.name)
     
   }
   
-  
   constructor(private dservice: ListdataService) { }
   
-  ngOnInit(): void {
-  }
+  ngOnInit() {}
   
 }

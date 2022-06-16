@@ -9,15 +9,17 @@ import { ListdataService } from "../../listdata.service"
 
 })
 export class ShowlistComponent implements OnInit {
-listName="Atul";
-title="showlist";
-infoReceived1: any = [];
+// listName="Atul";
+// title="showlist";
+infoReceived1: any;
+infoReceived2: any;
 
+people:any;
 getInfoFromService1(){
-    
-  this.infoReceived1 = this.dservice.getInfo1()
-  
-}
+    console.log("hii")
+  // this.infoReceived1 = this.dservice.addInfo()
+  // this.infoReceived2 = this.dservice.getInfo2()
+ }
 
 constructor(private dservice: ListdataService) { this.getInfoFromService1()}
 
