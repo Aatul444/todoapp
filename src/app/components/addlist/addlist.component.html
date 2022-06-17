@@ -2,11 +2,12 @@
 	<div class="item-0"><app-showlist></app-showlist></div>
 	<div class="item-1">
     <div class="container">
-        <form #frm="ngForm" (ngSubmit)="updateInfo(frm)">
-            <div class="input-field">
-              <input type="text" [(ngModel)]="name" required>
-              <label for="name">Work Todo</label>
-            </div>
-          </form>        
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" (keyup.enter)="onSubmit(f)">
+        <div class="input-field">
+        <input name="task" ngModel #task="ngModel" novalidate required>
+        <label for="name">Work Todo</label>
+        <input name="description" ngModel #description="ngModel">
+        </div>
+      </form>
     </div>
-</div>
+  </div>

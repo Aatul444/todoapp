@@ -3,8 +3,12 @@
     <ul>
         <!-- *ngFor="" -->
         <li *ngFor = "let info of infoReceived1" style="list-style-type: none;">
-            <div style="display: flex;"><img style="width: 22px;height: 20px;margin-right: 5px;" src="assets/images/art-book.png"><span style="float: left;">{{info.name}}</span></div>
+            <div style="display: flex;">
+                <img style="width: 22px;height: 20px;margin-right: 5px;" src="assets/images/art-book.png">
+                <span style="float: left;">
+                    {{info}}
+                </span>
+            </div>
         </li>
-        
     </ul>        
 </div>

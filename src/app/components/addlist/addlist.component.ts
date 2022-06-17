@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ListdataService } from "../../listdata.service"
+import { ListdataService } from "../../listdata.service";
+import {NgForm} from '@angular/forms';
+
 @Component({
   selector: 'app-addlist',
   templateUrl: './addlist.component.html',
@@ -9,17 +11,19 @@ import { ListdataService } from "../../listdata.service"
 export class AddlistComponent implements OnInit {
 title = 'addlist';
 infoReceived1: string[] = [];
-name = '';
+datafromaddlist: string[]=[];
 
-updateInfo(frm:any){
-
-  this.dservice.addInfo(this.name)
-
+onSubmit(f: NgForm) {
+  console.log('in addlist #task value of input section');
+  console.log(f.value.task); 
+  this.datafromaddlist= f.value;
+  console.log(this.datafromaddlist);
+  this.dservice.addInfo(this.datafromaddlist)
 }
 
   getInfoFromService1(){
     
-    this.infoReceived1 = this.dservice.addInfo(this.name)
+    this.infoReceived1 = this.dservice.getInfo1()
     
   }
   
