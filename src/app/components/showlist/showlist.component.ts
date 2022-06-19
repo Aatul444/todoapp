@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ListdataService } from "../../listdata.service"
 
 @Component({
@@ -9,11 +9,15 @@ import { ListdataService } from "../../listdata.service"
 
 })
 export class ShowlistComponent implements OnInit {
-infoReceived1: string[] =[];
+infoReceived1: string[] = [];
+
+@Input() datatochild : any;
 
 getInfoFromService1(){
   this.infoReceived1 = this.dservice.getInfo1();
-  console.log("in showlist");
+  console.log(this.infoReceived1);
+
+  this.infoReceived1.push(this.datatochild);
   console.log(this.infoReceived1);
  }
 

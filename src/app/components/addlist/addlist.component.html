@@ -1,5 +1,8 @@
 <div class="container">
-	<div class="item-0"><app-showlist></app-showlist></div>
+	<div class="item-0">
+    <app-showlist [datatochild]="datafromaddlist">
+    </app-showlist>
+  </div>
 	<div class="item-1">
     <div class="container">
       <form #f="ngForm" (ngSubmit)="onSubmit(f)" (keyup.enter)="onSubmit(f)">
@@ -7,6 +10,7 @@
         <input name="task" ngModel #task="ngModel" novalidate required>
         <label for="name">Work Todo</label>
         <input name="description" ngModel #description="ngModel">
+        <p>inforecieved1{{infoReceived1}} data from add list{{datafromaddlist}}</p>
         </div>
       </form>
     </div>
