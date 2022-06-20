@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ListdataService } from "../../listdata.service"
-
+import { Tasks } from 'src/app/interfaces/tasks';
 @Component({
   selector: 'app-showlist',
   templateUrl: './showlist.component.html',
@@ -9,34 +9,18 @@ import { ListdataService } from "../../listdata.service"
 
 })
 export class ShowlistComponent implements OnInit {
-local={
-  "task": "Douglas  Pace",
-  "description": "111lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
-}
-  inputText: string[]=[]
-constructor(private listdataservice:ListdataService) {
-}
+
+  inputText: Array<string> = ['fsdfsf', 'fes', 'fesf'];
 
 
-ngOnInit(): void {
-  this.listdataservice.dataEmitter.subscribe((value)=>{
-    this.inputText=value;
 
+  ngOnInit(): void { }
+  constructor(private listdataservice: ListdataService) {
+    this.listdataservice.dataEmitter.subscribe((value) => {
+      this.inputText = value;
+      console.log('this is input text')
+      console.log(this.inputText);
     })
+    console.log('showlist constructor')
   }
- 
-
 }
-
-
-// infoReceived1: string[] = [];
-
-// // @Input() datatochild : any;
-
-// getInfoFromService1(){
-//   this.infoReceived1 = this.dservice.getInfo1();
-//   console.log(this.infoReceived1);
-
-//   this.infoReceived1.push(this.datatochild);
-//   console.log(this.infoReceived1);
-//  }constructor(private dservice: ListdataService) { this.getInfoFromService1()}

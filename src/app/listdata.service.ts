@@ -1,5 +1,6 @@
 import { EventEmitter,Injectable } from '@angular/core';
 import { Observable, of, Subject } from 'rxjs';
+// import { Tasks } from 'src/app/interfaces/tasks';
 
 @Injectable({
   providedIn: 'root'
@@ -11,22 +12,22 @@ export class ListdataService {
       "description": "111lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
     },
     {
-      "name": "Mcleod  Mueller",
+      "task": "Mcleod  Mueller",
       "description": "222lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
     },
     {
-    "name": "Day  Meyers",
+    "task": "Day  Meyers",
     "description": "333lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
   },
   {
-    "name": "Aguirre  Ellis",
+    "task": "Aguirre  Ellis",
     "description": "444lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
   },
   {
-    "name": "Cook  Tyson",
+    "task": "Cook  Tyson",
     "description": "555lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
   }
-]
+];
 
   dataEmitter=new Subject<string[]>();
 
@@ -37,7 +38,10 @@ export class ListdataService {
   }
 
  
-  constructor() {console.log("inside service")}
+  constructor()
+   {
+    console.log("inside service");
+    }
 
 }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListdataService } from "../../listdata.service";
-import {NgForm} from '@angular/forms';
+import { NgForm } from '@angular/forms';
+import { Tasks } from 'src/app/interfaces/tasks';
 
 @Component({
   selector: 'app-addlist',
@@ -9,21 +10,24 @@ import {NgForm} from '@angular/forms';
   providers: [ListdataService]
 })
 export class AddlistComponent implements OnInit {
-title = 'addlist';
-enteredText : string[]=[];
-
-constructor(private listdataservice:ListdataService) {}
-  
-onSubmit(f: NgForm) {
-  this.enteredText=f.value;
-  console.log(this.enteredText)
-  this.listdataservice.raiseDataEmitterEvent(this.enteredText)
-
-}
-  ngOnInit() {
-    // console.log(this.enteredText);
+  title = 'addlist';
+ 
+  enteredText: Tasks = {
+    task: '',
+    description: ''
   }
-  
+
+  constructor(private listdataservice: ListdataService) { }
+
+  onSubmit(f: NgForm) {
+
+    this.enteredText = f.value;
+    console.log(this.enteredText)
+    // this.listdataservice.raiseDataEmitterEvent(this.enteredText)
+ 
+  }
+  ngOnInit() { }
+
 }
 
 
