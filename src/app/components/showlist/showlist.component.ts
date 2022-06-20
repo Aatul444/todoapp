@@ -9,17 +9,23 @@ import { ListdataService } from "../../listdata.service"
 
 })
 export class ShowlistComponent implements OnInit {
+local={
+  "task": "Douglas  Pace",
+  "description": "111lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+}
+  inputText: string[]=[]
+constructor(private listdataservice:ListdataService) {
+}
 
 
-constructor(private listdataservice:ListdataService) {}
+ngOnInit(): void {
+  this.listdataservice.dataEmitter.subscribe((value)=>{
+    this.inputText=value;
 
-
-  ngOnInit(): void {
-    this.listdataservice.dataEmitter.subscribe((value)=>{
-      // this.inputText=value;
     })
   }
-  
+ 
+
 }
 
 

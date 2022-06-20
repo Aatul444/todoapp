@@ -15,11 +15,28 @@ enteredText : string[]=[];
 constructor(private listdataservice:ListdataService) {}
   
 onSubmit(f: NgForm) {
-  // this.listdataservice.raiseDataEmitter(this.enteredText);
+  this.enteredText=f.value;
+  console.log(this.enteredText)
+  this.listdataservice.raiseDataEmitterEvent(this.enteredText)
+
 }
-  ngOnInit() {}
+  ngOnInit() {
+    // console.log(this.enteredText);
+  }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
 // infoReceived1: string[] = [];
 // datafromaddlist: string[] = [];
 // constructor(private dservice: ListdataService) { }
