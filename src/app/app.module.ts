@@ -11,6 +11,8 @@ import { ShowlistComponent } from './components/showlist/showlist.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { CurrenttaskComponent } from './components/currenttask/currenttask.component';
+import { Comp1Component } from './observables/components/comp1/comp1.component';
+import { Comp2Component } from './observables/components/comp2/comp2.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CurrenttaskComponent } from './components/currenttask/currenttask.compo
     AddlistComponent,
     ShowlistComponent,
     LoginComponent,
-    CurrenttaskComponent
+    CurrenttaskComponent,
+    Comp1Component,
+    Comp2Component
   ],
   imports: [
     BrowserModule,

@@ -10,23 +10,25 @@ import {NgForm} from '@angular/forms';
 })
 export class AddlistComponent implements OnInit {
 title = 'addlist';
-infoReceived1: string[] = [];
-datafromaddlist: string[] = [];
+enteredText : string[]=[];
 
-getInfoFromService1(){
-  this.infoReceived1 = this.dservice.getInfo1()
-  }
-
+constructor(private listdataservice:ListdataService) {}
+  
 onSubmit(f: NgForm) {
-  this.datafromaddlist= f.value;
-  this.dservice.addInfo(this.datafromaddlist)
-
+  // this.listdataservice.raiseDataEmitter(this.enteredText);
 }
-
-  
-  
-  constructor(private dservice: ListdataService) { }
-  
   ngOnInit() {}
   
 }
+// infoReceived1: string[] = [];
+// datafromaddlist: string[] = [];
+// constructor(private dservice: ListdataService) { }
+
+// onSubmit(f: NgForm) {
+//   this.datafromaddlist= f.value;
+//   this.dservice.addInfo(this.datafromaddlist)
+
+// }
+// getInfoFromService1(){
+//   this.infoReceived1 = this.dservice.getInfo1()
+//   }

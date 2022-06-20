@@ -9,22 +9,28 @@ import { ListdataService } from "../../listdata.service"
 
 })
 export class ShowlistComponent implements OnInit {
-infoReceived1: string[] = [];
 
-@Input() datatochild : any;
 
-getInfoFromService1(){
-  this.infoReceived1 = this.dservice.getInfo1();
-  console.log(this.infoReceived1);
-
-  this.infoReceived1.push(this.datatochild);
-  console.log(this.infoReceived1);
- }
-
-constructor(private dservice: ListdataService) { this.getInfoFromService1()}
+constructor(private listdataservice:ListdataService) {}
 
 
   ngOnInit(): void {
+    this.listdataservice.dataEmitter.subscribe((value)=>{
+      // this.inputText=value;
+    })
   }
   
 }
+
+
+// infoReceived1: string[] = [];
+
+// // @Input() datatochild : any;
+
+// getInfoFromService1(){
+//   this.infoReceived1 = this.dservice.getInfo1();
+//   console.log(this.infoReceived1);
+
+//   this.infoReceived1.push(this.datatochild);
+//   console.log(this.infoReceived1);
+//  }constructor(private dservice: ListdataService) { this.getInfoFromService1()}
