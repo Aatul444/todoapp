@@ -8,25 +8,33 @@ import { Tasks } from 'src/app/interfaces/tasks';
   styleUrls: ['./currenttask.component.css']
 })
 export class CurrenttaskComponent implements OnInit {
-  
-  // inputText: Tasks = {
-  //   task: '',
-  //   description: ''
-  // }
-  inputText: any;
-  constructor(private listdataservice: ListdataService) {
 
-    this.listdataservice.dataEmitter.subscribe((value) => {
+  inputText: Array<Tasks> = [];
+
+  constructor(private listdataservice: ListdataService) { }
+
+  ngOnInit(): void {
+    this.listdataservice.dataEmitter.subscribe((value: Array<Tasks>) => {
       this.inputText = value;
-      console.log('this is input text')
-      console.log(this.inputText);
+      console.log(this.inputText)
     })
-    console.log('currenttask constructor');
-    console.log(this.inputText.description);
 
   }
+  // onSubmit(f: NgForm) {
+  //   this.editedText = f.value;
+  //   this.listdataservice.popItemFromList(this.editedText)
+  // }
+
+  // editdata(){
+  //   let index = this.myObjArray.indexOf(item);
+
+  //   item.name = "Change Hardik";
+
+  //   this.myObjArray[index] = item;
 
 
-  ngOnInit(): void { }
 
+  //   console.log(this.myObjArray);
+
+  // }
 }

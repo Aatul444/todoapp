@@ -1,4 +1,5 @@
 <div class="container">
-	<div class="item-0" *ngFor="let info of this.inputText">{{inputText.task}}</div>
-	<div class="item-1">{{inputText.description}}</div>
+	<div class="item-0">{{this.inputText[0].task}}</div>
+	<div class="item-1">{{this.inputText[0].description}}</div>
 </div>
+<!-- <button (click)="editdata()">Edit</button> -->

@@ -9,7 +9,6 @@ import { CurrenttaskComponent } from './components/currenttask/currenttask.compo
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
-
   { path: "addlist", component: AddlistComponent },
   { path: "about", component: AboutComponent },
   { path: "todo", component: TodoComponent },

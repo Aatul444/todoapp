@@ -1,19 +1,11 @@
 <p class="center"><b><h3>A l l   L i s t s</h3></b></p>
 <div class="vl">
-    <ul>
-        <li  *ngFor = "let info of this.inputText" style="list-style-type: none;">       
+    <ul *ngFor = "let info of this.inputText">
+        <li style="list-style-type: none;">       
             <div style="display: flex;">
                 <img style="width: 22px;height: 20px;margin-right: 5px;" src="assets/images/art-book.png">
                 <span style="float: left;">
-                    {{inputText}}
-                </span>
-            </div>
-        </li>
-        <li  *ngFor = "let info of this.inputText" style="list-style-type: none;">       
-            <div style="display: flex;">
-                <img style="width: 22px;height: 20px;margin-right: 5px;" src="assets/images/art-book.png">
-                <span style="float: left;">
-                    {{inputText}}
+                   <a routerLink="/currenttask" >{{info.task}}</a>
                 </span>
             </div>
         </li>

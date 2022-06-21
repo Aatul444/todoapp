@@ -7,8 +7,7 @@ import { Subject } from 'rxjs';
 })
 export class DataserviceService {
 
-  // dataEmitter = new EventEmitter<string>();
-dataEmitter=new Subject<string>();
+  dataEmitter = new EventEmitter<string>();
 
   raiseDataEmitterEvent(data:string){
     this.dataEmitter.next(data);

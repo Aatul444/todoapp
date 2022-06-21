@@ -5,22 +5,21 @@ import { Tasks } from 'src/app/interfaces/tasks';
   selector: 'app-showlist',
   templateUrl: './showlist.component.html',
   styleUrls: ['./showlist.component.css'],
-  providers: [ListdataService]
-
 })
 export class ShowlistComponent implements OnInit {
+  inputText: Array<Tasks> = [];
 
-  inputText: Array<string> = ['fsdfsf', 'fes', 'fesf'];
+  constructor(private listdataservice: ListdataService) { }
 
-
-
-  ngOnInit(): void { }
-  constructor(private listdataservice: ListdataService) {
-    this.listdataservice.dataEmitter.subscribe((value) => {
+  ngOnInit(): void {
+    this.listdataservice.dataEmitter.subscribe((value: Array<Tasks>) => {
       this.inputText = value;
-      console.log('this is input text')
-      console.log(this.inputText);
     })
-    console.log('showlist constructor')
   }
+  // passclass(eve:any){
+  //   eve.target?.className
+  // }
+  // shareindex(index) {
+
+  // }
 }
