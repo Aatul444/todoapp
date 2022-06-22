@@ -1,5 +1,32 @@
-<div class="container">
-	<div class="item-0">{{this.inputText[0].task}}</div>
-	<div class="item-1">{{this.inputText[0].description}}</div>
+<div class="subtasks">
+	<p class="center"><b><h3>S U B L i s t s</h3></b></p>
 </div>
-<!-- <button (click)="editdata()">Edit</button> -->
+
+<div class="container">
+	<div class="item-0">
+		<div class="vl">
+			<ul *ngFor="let subtaskItem of this.subinputText; let i = index" class="subtaskItem">
+				<li style="list-style-type: none;">
+					<div style="display: flex;">
+						<img style="width: 22px;height: 20px;margin-right: 5px;" src="assets/images/art-book.png">
+						<span style="float: left;">
+							<a (click)="selectGateway(i)" >{{subtaskItem.subtask}}{{i}}</a>
+						</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="item-1">
+		<div class="container card">
+			<form #f="ngForm" (ngSubmit)="subonSubmit(f)">
+				<div class="input-field">
+					<input class="clear" name="subtask" ngModel #task="ngModel" novalidate required>
+					<label for="name">Todo SubTasks</label>
+					<button class="button" type="submit">Add SubTasks</button>
+
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

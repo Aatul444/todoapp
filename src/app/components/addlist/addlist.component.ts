@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListdataService } from "../../listdata.service";
 import { NgForm } from '@angular/forms';
 import { Tasks } from 'src/app/interfaces/tasks';
+import { resetFakeAsyncZone } from '@angular/core/testing';
 
 @Component({
   selector: 'app-addlist',
@@ -10,10 +11,11 @@ import { Tasks } from 'src/app/interfaces/tasks';
 })
 export class AddlistComponent implements OnInit {
   title = 'addlist';
- 
+
   enteredText: Tasks = {
     task: '',
-    description: ''
+    description: '',
+    isActive:false
   }
 
   constructor(private listdataservice: ListdataService) { }
@@ -22,6 +24,8 @@ export class AddlistComponent implements OnInit {
 
   onSubmit(f: NgForm) {
     this.enteredText = f.value;
+    console.log(this.enteredText)
     this.listdataservice.addItemToList(this.enteredText)
+    f.reset();
   }
 }

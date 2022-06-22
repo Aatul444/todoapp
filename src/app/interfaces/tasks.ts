@@ -1,4 +1,5 @@
 export interface Tasks {
     task: string,
-    description: string
+    description: string,
+    isActive:boolean
 }

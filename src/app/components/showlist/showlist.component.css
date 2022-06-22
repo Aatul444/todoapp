@@ -5,3 +5,15 @@
     border-right: 1px solid #ff5a61;
     height: 100%;
 }
+.heighlight{
+    color: #ff5a61;
+    text-decoration: wavy;
+}
+.dynamic-green{color: green;}
+.dynamic-red{color: #ff5a61;}
+p {
+    font-family: Lato;
+  }
+  .static {
+    text-decoration: underline;
+  }
