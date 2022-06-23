@@ -3,7 +3,9 @@
 	justify-content: space-around;
 	align-items: center;
 }
-
+.subdatalist{
+	margin-bottom: 15px;
+}
 .subtasks {
 	align-self: stretch;
 }
@@ -12,6 +14,13 @@
 }
 form {
 	margin: 200px;
+	width: 330px;
+    margin: 64px 20px 0 0;
+	padding-top: 30px;
+	border: 1px solid black;
+	border-radius: 10px;
+
+    height: 180px;
   }
   .input-field {
 	position: relative;
@@ -53,7 +62,6 @@ form {
 	color: #00dd22;
   }
  
-
   .container {
 	display: flex;
 }
@@ -61,6 +69,13 @@ form {
 .item-0 {
 	flex-grow: 1;
 	align-self: stretch;
+	justify-content: center;
+	display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 8%;
+	width: 15%;
+
 }
 
 .item-1 {
@@ -69,4 +84,9 @@ form {
 }
 .card{
 	border: 2px black;
+	border-radius: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 25px;
 }

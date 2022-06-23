@@ -11,30 +11,31 @@ import { Subtasks } from 'src/app/interfaces/subtasks';
 })
 export class CurrenttaskComponent implements OnInit {
   inputText: Array<Tasks> = [];
-  subinputText: Array<Subtasks> = [];
-  subTask: Subtasks = {
-    subtask: ''
-  };
-  subvalues:any;
-   
+  dataToSubList: Array<string> = [];
+  num: Array<number> = [];
   constructor(private listdataservice: ListdataService) { }
 
   ngOnInit(): void {
     this.listdataservice.dataEmitter.subscribe((value: Array<Tasks>) => {
-    this.inputText = value;
-
-})
-}
-  subonSubmit(f: NgForm) {
-    // this.subinputText = f.value;
-    this.subinputText.push(f.value)
-    this.subvalues=this.subinputText.entries();
-    console.log(this.subvalues)
-    // this.listdataservice.addItemToList;
-    f.reset();
+      this.inputText = value;
+    })
+    this.listdataservice.indexEmitter.subscribe((value: Array<number>) => {
+      this.num = value;
+    })
+    this.listdataservice.subdataEmitter.subscribe((value: Array<string>) => {
+      this.dataToSubList = value
+    })
   }
-  selectGateway(num:number){
-console.log(num);
+  selectGateway(num: number) {
+    console.log(num);
+    console.log(this.inputText)
   }
 
+  subListDataSubmit() {
+    console.log(this.num.length)
+    console.log('clicked one task is this'+this.inputText[this.num.length-1].subTasks)
+    this.inputText[this.num[this.num.length]].subTasks.push(this.dataToSubList[this.num.length])
+    console.log(this.inputText)
+    console.log(this.inputText[this.num[this.num.length]])
+  }
 }

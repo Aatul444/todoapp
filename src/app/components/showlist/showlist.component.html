@@ -10,7 +10,8 @@
                     <!-- <a routerLink="/currenttask" [class.isClicked]="taskItem.isClicked"
                         (click)="taskItem.isClicked = true">
                         </a> -->
-                        <a routerLink="/currenttask" (click)="selectGateway(i)">
+                        <a routerLink="/currenttask" 
+                        (click)="selectGateway(i)" class="Box" [class.selectGateway]="check">
                         <!-- [ngIfElse]="loading" *ngIf="openSubTasks"> -->
                         {{info.task}}
                     </a>

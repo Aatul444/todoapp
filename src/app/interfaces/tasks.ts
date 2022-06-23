@@ -1,5 +1,5 @@
 export interface Tasks {
     task: string,
-    description: string,
+    subTasks: Array<string>,
     isActive:boolean
 }

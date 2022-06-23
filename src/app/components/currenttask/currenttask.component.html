@@ -5,12 +5,12 @@
 <div class="container">
 	<div class="item-0">
 		<div class="vl">
-			<ul *ngFor="let subtaskItem of this.subinputText; let i = index" class="subtaskItem">
+			<ul *ngFor="let subtaskItem of this.inputText; let i = index" class="inputText">
 				<li style="list-style-type: none;">
 					<div style="display: flex;">
 						<img style="width: 22px;height: 20px;margin-right: 5px;" src="assets/images/art-book.png">
 						<span style="float: left;">
-							<a (click)="selectGateway(i)" >{{subtaskItem.subtask}}{{i}}</a>
+							<a class="subdatalist" (click)="selectGateway(i)">{{subtaskItem.subTasks}}</a>
 						</span>
 					</div>
 				</li>
@@ -19,12 +19,11 @@
 	</div>
 	<div class="item-1">
 		<div class="container card">
-			<form #f="ngForm" (ngSubmit)="subonSubmit(f)">
+			<form>
 				<div class="input-field">
-					<input class="clear" name="subtask" ngModel #task="ngModel" novalidate required>
+					<input class="clear" [(ngModel)]="dataToSubList" name="currentForm">
 					<label for="name">Todo SubTasks</label>
-					<button class="button" type="submit">Add SubTasks</button>
-
+					<button class="button" type="submit" (click)="subListDataSubmit()">Add SubTasks</button>
 				</div>
 			</form>
 		</div>

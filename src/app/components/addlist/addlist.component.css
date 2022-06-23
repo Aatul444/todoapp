@@ -1,21 +1,19 @@
 .container {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 25px;
-
+	/* border: 2px solid black; */
 }
 
-.item-0 {
-	align-self: stretch;
-	width:30%;
-	height: 100%;
-}
-
-.item-1 {
-	flex-grow: 1;
-	align-self: stretch;
-}
 form {
-	margin: 200px;
+	width: 330px;
+    margin: 64px 20px 0 0;
+	padding-top: 30px;
+	border: 1px solid black;
+	border-radius: 10px;
+
+    height: 180px;
   }
   .input-field {
 	position: relative;

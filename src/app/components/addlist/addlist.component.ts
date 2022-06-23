@@ -14,7 +14,7 @@ export class AddlistComponent implements OnInit {
 
   enteredText: Tasks = {
     task: '',
-    description: '',
+    subTasks: [],
     isActive:false
   }
 

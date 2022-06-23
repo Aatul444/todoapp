@@ -17,3 +17,9 @@ p {
   .static {
     text-decoration: underline;
   }
+  .changestyle{
+    color: #ff5a61;
+  }
+  .box{
+    color: black;
+  }
