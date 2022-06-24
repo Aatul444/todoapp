@@ -7,12 +7,14 @@
 <div class="container">
 	<div class="item-0">
 		<div class="vl">
-			<ul *ngFor="let subtaskItem of this.inputText; let i = index" class="inputText">
+			<ul *ngFor="let i = index">
+				<!--*ngFor="let subtaskItem of this.inputText; let i = index" class="inputText"-->
 				<li style="list-style-type: none;">
 					<div style="display: flex;">
 						<img style="width: 22px;height: 20px;margin-right: 5px;" src="assets/images/art-book.png">
 						<span style="float: left;">
-							<a class="subdatalist" (click)="selectGateway(i)">{{subtaskItem.subTasks}}</a>
+							{{sublist[i]}}{{sublist}}
+							<!-- <a class="subdatalist" (click)="selectGateway(i)">{{subtaskItem.subTasks}}</a> -->
 						</span>
 					</div>
 				</li>

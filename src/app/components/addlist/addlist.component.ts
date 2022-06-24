@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListdataService } from "../../listdata.service";
+import { ListdataService } from "../../services/listdata.service";
 import { NgForm } from '@angular/forms';
 import { Tasks } from 'src/app/interfaces/tasks';
 

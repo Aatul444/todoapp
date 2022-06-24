@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListdataService } from "../../listdata.service";
+import { ListdataService } from "../../services/listdata.service";
 import { Tasks } from 'src/app/interfaces/tasks';
 
 @Component({
@@ -9,8 +9,9 @@ import { Tasks } from 'src/app/interfaces/tasks';
 })
 export class CurrenttaskComponent implements OnInit {
   inputText: Array<Tasks> = [];
-  dataToSubList: Array<string> = [];
   num: Array<number> = [];
+  sublist: Array<string> = [];
+  dataToSubList: string = '';
   constructor(private listdataservice: ListdataService) { }
 
   ngOnInit(): void {
@@ -19,9 +20,11 @@ export class CurrenttaskComponent implements OnInit {
     })
     this.listdataservice.indexEmitter.subscribe((value: Array<number>) => {
       this.num = value;
+      // this.inputText[this.num[this.num.length - 1]].subTasks.push(this.dataToSubList);
+
     })
     this.listdataservice.subdataEmitter.subscribe((value: Array<string>) => {
-      this.dataToSubList = value
+      this.sublist = value
     })
   }
   selectGateway(num: number) {
@@ -30,10 +33,32 @@ export class CurrenttaskComponent implements OnInit {
   }
 
   subListDataSubmit() {
-    console.log(this.num.length)
-    console.log('clicked one task is this' + this.inputText[this.num.length - 1].subTasks)
-    this.inputText[this.num[this.num.length]].subTasks.push(this.dataToSubList[this.num.length])
-    console.log(this.inputText)
-    console.log(this.inputText[this.num[this.num.length]])
+    this.sublist.push(this.dataToSubList);
+    console.log('subtasks values from currenttasks'+this.dataToSubList[this.num.length])
+    // this.inputText[this.num[this.num.length]].subTasks.push(this.dataToSubList[this.num.length])
+    this.inputText[this.num[this.num.length - 1]].subTasks.push(this.dataToSubList);
+
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * 
+ console.log(this.num.length)
+ console.log('clicked task is this' + this.inputText[this.num.length - 1].subTasks)
+ console.log('this is input text' + this.inputText)
+ console.log('this is last element of input text' + this.inputText[this.num[this.num.length]])
+ */

@@ -1,15 +1,14 @@
-import { EventEmitter,Injectable } from '@angular/core';
-import { discardPeriodicTasks } from '@angular/core/testing';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { Tasks } from 'src/app/interfaces/tasks';
-import { Subtasks } from './interfaces/subtasks';
+// import { Subtasks } from '../interfaces/subtasks';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListdataService {
   allList: Array<Tasks> = [];
-  sublist:Array<Subtasks>=[];
+  // sublist:Array<Subtasks>=[];
   index:Array<number>=[];
   subTasks:Array<string>=[];
 
@@ -23,21 +22,24 @@ export class ListdataService {
     this.allList.push(data);
     this.dataEmitter.next(this.allList);
   }
+
   workingIndex(index:number){
     this.index.push(index);
     this.indexEmitter.next(this.index);
   }
-  addItemtoSubList(val:string){
+
+  addItemtoSubList(val: string){
     this.subTasks.push(val);
     this.subdataEmitter.next(this.subTasks);
   }
-// updateItem(index:number){
-//   this.allList[index].isActive=true;
-//   this.dataEmitter.next(this.allList);
-
-// }
-  // addSubList(data:Subtasks){
-  //   this.sublist.push(data);
-  //   // this.dataEmitter.next(this.sublist);
-  // }
+/**subdataEmitter
+  updateItem(index:number){
+  this.allList[index].isActive=true;
+  this.dataEmitter.next(this.allList);
+}
+  addSubList(data:Subtasks){
+    this.sublist.push(data);
+    // this.dataEmitter.next(this.sublist);
+  }
+  */
 }

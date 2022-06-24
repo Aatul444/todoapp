@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ListdataService } from "../../listdata.service"
+import { ListdataService } from "../../services/listdata.service"
 import { Tasks } from 'src/app/interfaces/tasks';
 // import { NgClass } from '@angular/common';
 @Component({
