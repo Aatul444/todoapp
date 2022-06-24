@@ -12,17 +12,10 @@
                         </a> -->
                         <a routerLink="/currenttask" 
                         (click)="selectGateway(i)" class="Box" [class.selectGateway]="check">
-                        <!-- [ngIfElse]="loading" *ngIf="openSubTasks"> -->
                         {{info.task}}
                     </a>
-                        <!--*ngIf="ifcondition; else elseBlock"(click)="highlight"--> 
                 </span>
             </div>
         </li>
     </ul>
 </div>
-
-<!-- can add this in a routing of {{info.task}}
-    class="static" *ngClass="test ? 'dynamic-green':'dynamic-red'" 
-                        (click)="openSubTasks"
--->

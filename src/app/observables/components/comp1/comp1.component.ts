@@ -13,7 +13,6 @@ export class Comp1Component implements OnInit {
   }
  enteredText: any;
  onBtnClick(){
-  // console.log(this.enteredText);
   this.dataService.raiseDataEmitterEvent(this.enteredText)
  }
 }

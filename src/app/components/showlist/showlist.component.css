@@ -1,25 +1,37 @@
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
-.vl{
-    border-right: 1px solid #ff5a61;
-    height: 100%;
+
+.vl {
+  border-right: 1px solid #ff5a61;
+  height: 100%;
 }
-.heighlight{
-    color: #ff5a61;
-    text-decoration: wavy;
+
+.heighlight {
+  color: #ff5a61;
+  text-decoration: wavy;
 }
-.dynamic-green{color: green;}
-.dynamic-red{color: #ff5a61;}
+
+.dynamic-green {
+  color: green;
+}
+
+.dynamic-red {
+  color: #ff5a61;
+}
+
 p {
-    font-family: Lato;
-  }
-  .static {
-    text-decoration: underline;
-  }
-  .changestyle{
-    color: #ff5a61;
-  }
-  .box{
-    color: black;
-  }
+  font-family: Lato;
+}
+
+.static {
+  text-decoration: underline;
+}
+
+.changestyle {
+  color: #ff5a61;
+}
+
+.box {
+  color: black;
+}

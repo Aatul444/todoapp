@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListdataService } from "../../listdata.service";
-import { NgForm } from '@angular/forms';
 import { Tasks } from 'src/app/interfaces/tasks';
-import { Subtasks } from 'src/app/interfaces/subtasks';
 
 @Component({
   selector: 'app-currenttask',
@@ -33,7 +31,7 @@ export class CurrenttaskComponent implements OnInit {
 
   subListDataSubmit() {
     console.log(this.num.length)
-    console.log('clicked one task is this'+this.inputText[this.num.length-1].subTasks)
+    console.log('clicked one task is this' + this.inputText[this.num.length - 1].subTasks)
     this.inputText[this.num[this.num.length]].subTasks.push(this.dataToSubList[this.num.length])
     console.log(this.inputText)
     console.log(this.inputText[this.num[this.num.length]])

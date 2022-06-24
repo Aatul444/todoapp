@@ -12,9 +12,11 @@ export class ListdataService {
   sublist:Array<Subtasks>=[];
   index:Array<number>=[];
   subTasks:Array<string>=[];
+
   dataEmitter = new BehaviorSubject<Array<Tasks>>(this.allList);
   indexEmitter=new BehaviorSubject<Array<number>>(this.index)
   subdataEmitter = new BehaviorSubject<Array<string>>(this.subTasks);
+  
   constructor() { }
 
   addItemToList(data: Tasks) {
@@ -24,6 +26,10 @@ export class ListdataService {
   workingIndex(index:number){
     this.index.push(index);
     this.indexEmitter.next(this.index);
+  }
+  addItemtoSubList(val:string){
+    this.subTasks.push(val);
+    this.subdataEmitter.next(this.subTasks);
   }
 // updateItem(index:number){
 //   this.allList[index].isActive=true;
