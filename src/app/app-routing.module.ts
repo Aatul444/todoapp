@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-import { TodoComponent } from './components/todo/todo.component';
-import { AboutComponent } from './components/about/about.component';
-import { AddlistComponent } from './components/addlist/addlist.component';
+import { TodoComponent } from './todo-tasks/todo/todo.component';
+import { AboutComponent } from './todo-tasks/about/about.component';
+import { AddlistComponent } from './todo-tasks/addlist/addlist.component';
 import { LoginComponent } from './components/login/login.component';
-import { CurrenttaskComponent } from './components/currenttask/currenttask.component';
+import { CurrenttaskComponent } from './todo-tasks/currenttask/currenttask.component';
 
 const routes: Routes = [
+  {path:'todotasks',loadChildren:()=>import('./todo-tasks/todo-tasks.module').then(rot=>rot.TodoTasksModule)},
   { path: "login", component: LoginComponent },
-  { path: "addlist", component: AddlistComponent },
-  { path: "about", component: AboutComponent },
-  { path: "todo", component: TodoComponent },
-  { path: "currenttask", component: CurrenttaskComponent },
   { path: "", component: TodoComponent },
   { path: "**", component: NotfoundComponent }
 ];

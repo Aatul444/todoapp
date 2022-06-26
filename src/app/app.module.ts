@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { TodoComponent } from './components/todo/todo.component';
-import { AboutComponent } from './components/about/about.component';
-import { AddlistComponent } from './components/addlist/addlist.component';
-import { ShowlistComponent } from './components/showlist/showlist.component';
+import { TodoComponent } from './todo-tasks/todo/todo.component';
+import { AboutComponent } from './todo-tasks/about/about.component';
+import { AddlistComponent } from './todo-tasks/addlist/addlist.component';
+import { ShowlistComponent } from './todo-tasks/showlist/showlist.component';
 import { LoginComponent } from './components/login/login.component';
 import { Comp1Component } from './observables/components/comp1/comp1.component';
 import { Comp2Component } from './observables/components/comp2/comp2.component';
-import { CurrenttaskComponent } from './components/currenttask/currenttask.component';
+import { CurrenttaskComponent } from './todo-tasks/currenttask/currenttask.component';
 
 @NgModule({
   declarations: [

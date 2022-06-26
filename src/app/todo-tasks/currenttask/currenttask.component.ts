@@ -30,7 +30,7 @@ export class CurrenttaskComponent implements OnInit {
 
   subListDataSubmit() {
     this.subTasksList.push(this.subTask)
-    this.inputText[this.taskIndex].subTasks.push()
+    this.inputText[this.taskIndex].subTasks.push(this.subTasksList)
   }
 }
 
