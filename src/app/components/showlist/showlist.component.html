@@ -11,11 +11,11 @@
                         (click)="taskItem.isClicked = true">
                         </a> -->
                         <a routerLink="/currenttask" 
-                        (click)="selectGateway(i)" class="Box" [class.selectGateway]="check">
+                        (click)="tasksLists(i)">
                         {{info.task}}
                     </a>
                 </span>
             </div>
-        </li>
+        </li><br>
     </ul>
 </div>

@@ -3,34 +3,40 @@
 	justify-content: space-around;
 	align-items: center;
 }
-.subdatalist{
+
+.subdatalist {
 	margin-bottom: 15px;
 }
+
 .subtasks {
 	align-self: stretch;
 }
-.center{
+
+.center {
 	text-align: center;
 }
+
 form {
 	margin: 200px;
 	width: 330px;
-    margin: 64px 20px 0 0;
+	margin: 64px 20px 0 0;
 	padding-top: 30px;
 	border: 1px solid black;
 	border-radius: 10px;
 
-    height: 180px;
-  }
-  .input-field {
+	height: 180px;
+}
+
+.input-field {
 	position: relative;
 	width: 250px;
 	height: 44px;
 	line-height: 44px;
 	margin: 0 0 0 40px;
 
-  }
-  label {
+}
+
+label {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -38,8 +44,9 @@ form {
 	color: #d3d3d3;
 	transition: 0.2s all;
 	cursor: text;
-  }
-  input {
+}
+
+input {
 	width: 100%;
 	border: 0;
 	outline: 0;
@@ -47,22 +54,25 @@ form {
 	border-bottom: 2px solid #d3d3d3;
 	box-shadow: none;
 	color: #111;
-  }
-  input:invalid {
+}
+
+input:invalid {
 	outline: 0;
-  }
-  input:focus,
-  input:valid {
+}
+
+input:focus,
+input:valid {
 	border-color: #00dd22;
-  }
-  input:focus~label,
-  input:valid~label {
+}
+
+input:focus~label,
+input:valid~label {
 	font-size: 14px;
 	top: -24px;
 	color: #00dd22;
-  }
- 
-  .container {
+}
+
+.container {
 	display: flex;
 }
 
@@ -71,9 +81,9 @@ form {
 	align-self: stretch;
 	justify-content: center;
 	display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 8%;
+	text-align: center;
+	justify-content: center;
+	margin-top: 8%;
 	width: 15%;
 
 }
@@ -82,7 +92,8 @@ form {
 	flex-grow: 1;
 	align-self: stretch;
 }
-.card{
+
+.card {
 	border: 2px black;
 	border-radius: 25%;
 	display: flex;

@@ -1,37 +1,35 @@
-.container {
+.adlist-container {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	margin: 25px;
+	align-items: center;
+	justify-content: center;
 }
 
 form {
 	width: 330px;
-	margin: 64px 20px 0 0;
-	padding-top: 30px;
-	border: 1px solid black;
-	border-radius: 10px;
-
 	height: 180px;
+	padding-top: 30px;
+	margin: 64px 20px 0 0;
+	border-radius: 10px;
+	border: 1px solid black;
 }
 
 .input-field {
-	position: relative;
 	width: 250px;
 	height: 44px;
 	line-height: 44px;
 	margin: 0 0 0 40px;
-
+	position: relative;
 }
 
 label {
-	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
+	cursor: text;
 	color: #d3d3d3;
 	transition: 0.2s all;
-	cursor: text;
+	position: absolute;
 }
 
 input {
@@ -39,9 +37,9 @@ input {
 	border: 0;
 	outline: 0;
 	padding: 0.5rem 0;
-	border-bottom: 2px solid #d3d3d3;
 	box-shadow: none;
 	color: #111;
+	border-bottom: 2px solid #d3d3d3;
 }
 
 input:invalid {
@@ -58,8 +56,4 @@ input:valid~label {
 	font-size: 14px;
 	top: -24px;
 	color: #00dd22;
-}
-
-.center {
-	text-align: center;
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ListdataService } from "../../services/listdata.service"
 import { Tasks } from 'src/app/interfaces/tasks';
-// import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-showlist',
   templateUrl: './showlist.component.html',
@@ -10,32 +9,27 @@ import { Tasks } from 'src/app/interfaces/tasks';
 export class ShowlistComponent implements OnInit {
   inputText: Array<Tasks> = [];
   check: Boolean = false;
-  index: Array<number> = [];
+  index: number=0;
   subDataToSubList: Array<string> = [];
 
   constructor(private listdataservice: ListdataService) { }
 
   ngOnInit(): void {
 
-    this.listdataservice.dataEmitter.subscribe((value: Array<Tasks>) => {
+    this.listdataservice.tasksEmitter.subscribe((value: Array<Tasks>) => {
       this.inputText = value;
     })
-    this.listdataservice.indexEmitter.subscribe((value: Array<number>) => {
+    this.listdataservice.tasksIndexEmitter.subscribe((value: number) => {
       this.index = value;
     })
-    this.listdataservice.subdataEmitter.subscribe((value: Array<string>) => {
+    this.listdataservice.subTasksEmitter.subscribe((value: Array<string>) => {
       this.subDataToSubList = value
     })
   }
 
-  selectGateway(num: number) {
+  tasksLists(num: number) {
     console.log(num);
-    this.listdataservice.workingIndex(num);
-    if (this.check == false) { this.check = true; console.log('yes it is clicked') }
-    else if (this.check == true) { this.check = false; }
-    if (this.check == true) {
-      console.log('inside if' + this.inputText[num].subTasks);
-    }
+    this.listdataservice.tasksIndex(num);
     this.subDataToSubList = this.inputText[num].subTasks;
   }
 }

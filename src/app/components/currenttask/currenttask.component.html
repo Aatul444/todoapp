@@ -7,17 +7,15 @@
 <div class="container">
 	<div class="item-0">
 		<div class="vl">
-			<ul *ngFor="let i = index">
-				<!--*ngFor="let subtaskItem of this.inputText; let i = index" class="inputText"-->
+			<ul *ngFor="let Stasks of this.subTasksList">
 				<li style="list-style-type: none;">
 					<div style="display: flex;">
 						<img style="width: 22px;height: 20px;margin-right: 5px;" src="assets/images/art-book.png">
 						<span style="float: left;">
-							{{sublist[i]}}{{sublist}}
-							<!-- <a class="subdatalist" (click)="selectGateway(i)">{{subtaskItem.subTasks}}</a> -->
+							{{Stasks}}
 						</span>
 					</div>
-				</li>
+				</li><br>
 			</ul>
 		</div>
 	</div>
@@ -25,7 +23,7 @@
 		<div class="container card">
 			<form>
 				<div class="input-field">
-					<input class="clear" [(ngModel)]="dataToSubList" name="currentForm">
+					<input class="clear" [(ngModel)]="subTask" name="currentForm">
 					<label for="name">Todo SubTasks</label>
 					<button class="button" type="submit" (click)="subListDataSubmit()">Add SubTasks</button>
 				</div>

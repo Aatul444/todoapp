@@ -25,6 +25,7 @@
     content: "";
     clear: both;
     display: table;
+    margin: 0 0 0 0;
   }
   
   .title {

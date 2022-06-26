@@ -1,5 +1,5 @@
-<div class="container">
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" (keyup.enter)="onSubmit(f)">
+<div class="addlist-container">
+  <form #f="ngForm" (ngSubmit)="addListPageForm(f)" (keyup.enter)="addListPageForm(f)">
     <div class="input-field">
       <input class="clear" name="task" ngModel #task="ngModel" novalidate required>
       <label for="name">Work Todo</label>

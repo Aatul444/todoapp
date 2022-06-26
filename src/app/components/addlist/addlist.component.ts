@@ -11,7 +11,7 @@ import { Tasks } from 'src/app/interfaces/tasks';
 export class AddlistComponent implements OnInit {
   title = 'addlist';
 
-  enteredText: Tasks = {
+  addListTasks: Tasks = {
     task: '',
     subTasks: [],
     isActive: false
@@ -21,10 +21,10 @@ export class AddlistComponent implements OnInit {
 
   ngOnInit() { }
 
-  onSubmit(f: NgForm) {
-    this.enteredText = f.value;
-    console.log(this.enteredText)
-    this.listdataservice.addItemToList(this.enteredText)
+  addListPageForm(f: NgForm) {
+    this.addListTasks = f.value;
+    console.log(this.addListTasks)
+    this.listdataservice.addTasksToList(this.addListTasks)
     f.reset();
   }
 }
